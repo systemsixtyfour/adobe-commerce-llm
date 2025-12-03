@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Default configuration values for LLMs TXT Generator
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <llmstxt_generator>
+            <general>
+                <enabled>0</enabled>
+                <entity_types>cms_pages,products,categories</entity_types>
+            </general>
+            <company>
+                <name></name>
+                <description></description>
+                <additional_info></additional_info>
+            </company>
+            <cron>
+                <frequency>W</frequency>
+                <time>02,00,00</time>
+            </cron>
+            <limits>
+                <max_products>0</max_products>
+                <max_categories>0</max_categories>
+                <max_cms_pages>0</max_cms_pages>
+                <include_disabled_products>0</include_disabled_products>
+            </limits>
+        </llmstxt_generator>
+    </default>
+</config>

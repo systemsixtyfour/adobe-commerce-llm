@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Admin Configuration for LLMs TXT Generator
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="system64_llmstxt" translate="label" sortOrder="500">
+            <label>LLMs TXT Generator</label>
+        </tab>
+
+        <section id="llmstxt_generator" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>LLMs TXT Generator</label>
+            <tab>system64_llmstxt</tab>
+            <resource>System64_LlmsTxtGenerator::config</resource>
+
+            <!-- General Settings -->
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable or disable the LLMs TXT Generator module</comment>
+                </field>
+
+                <field id="entity_types" translate="label comment" type="multiselect" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Entity Types</label>
+                    <source_model>System64\LlmsTxtGenerator\Model\Config\Source\EntityTypes</source_model>
+                    <comment>Select which entities to include in the llms.txt file</comment>
+                </field>
+            </group>
+
+            <!-- Company Information -->
+            <group id="company" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Company Information</label>
+
+                <field id="name" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Company Name</label>
+                    <comment>Your company or store name</comment>
+                </field>
+
+                <field id="description" translate="label comment" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Company Description</label>
+                    <comment>Brief description of your company/store for AI systems</comment>
+                </field>
+
+                <field id="additional_info" translate="label comment" type="textarea" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Additional Information</label>
+                    <comment>Any additional information you want AI systems to know</comment>
+                </field>
+            </group>
+
+            <!-- Cron Settings -->
+            <group id="cron" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Automatic Generation Settings</label>
+
+                <field id="frequency" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Generation Frequency</label>
+                    <source_model>System64\LlmsTxtGenerator\Model\Config\Source\Frequency</source_model>
+                    <comment>How often should the llms.txt file be regenerated</comment>
+                </field>
+
+                <field id="time" translate="label comment" type="time" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Generation Time</label>
+                    <comment>Time of day to generate the file (server time)</comment>
+                </field>
+            </group>
+
+            <!-- File Status -->
+            <group id="status" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>File Status</label>
+
+                <field id="info" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Current Status</label>
+                    <frontend_model>System64\LlmsTxtGenerator\Block\Adminhtml\System\Config\Status</frontend_model>
+                </field>
+
+                <field id="generate_button" translate="label" type="button" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Generate Now</label>
+                    <frontend_model>System64\LlmsTxtGenerator\Block\Adminhtml\System\Config\GenerateButton</frontend_model>
+                </field>
+            </group>
+
+            <!-- Content Limits -->
+            <group id="limits" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Content Limits</label>
+
+                <field id="max_products" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Max Products</label>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                    <comment>Maximum number of products to include (0 = unlimited)</comment>
+                </field>
+
+                <field id="max_categories" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Max Categories</label>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                    <comment>Maximum number of categories to include (0 = unlimited)</comment>
+                </field>
+
+                <field id="max_cms_pages" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Max CMS Pages</label>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                    <comment>Maximum number of CMS pages to include (0 = unlimited)</comment>
+                </field>
+
+                <field id="include_disabled_products" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Include Disabled Products</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

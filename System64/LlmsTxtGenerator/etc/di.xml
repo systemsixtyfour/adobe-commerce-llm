@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Dependency Injection configuration for LLMs TXT Generator
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- CLI Command Registration -->
+    <type name="Magento\Framework\Console\CommandListInterface">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="llmstxt_generate" xsi:type="object">System64\LlmsTxtGenerator\Console\Command\GenerateCommand</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <!-- Cron Expression Backend Model -->
+    <virtualType name="System64\LlmsTxtGenerator\Model\Config\Backend\Cron" type="Magento\Cron\Model\Config\Backend\Product\Alert">
+        <arguments>
+            <argument name="cronStringPath" xsi:type="string">llmstxt_generator/cron/cron_expr</argument>
+            <argument name="cronModelPath" xsi:type="string">llmstxt_generator/cron/cron_model</argument>
+        </arguments>
+    </virtualType>
+
+</config>
