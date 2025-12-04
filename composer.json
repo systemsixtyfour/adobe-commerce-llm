@@ -1,9 +1,8 @@
 {
-    "name": "system64/module-llmstxt-generator",
+    "name": "julioxx22/adobe-commerce-llm",
     "description": "Magento 2 LLMs TXT Generator - Creates llms.txt file for AI crawlers (ChatGPT, Claude, Gemini, Perplexity)",
     "type": "magento2-module",
-    "version": "1.0.0",
-    "license": "proprietary",
+    "license": "MIT",
     "authors": [
         {
             "name": "System64 Development",
