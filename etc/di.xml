@@ -11,13 +11,13 @@
     <type name="Magento\Framework\Console\CommandListInterface">
         <arguments>
             <argument name="commands" xsi:type="array">
-                <item name="llmstxt_generate" xsi:type="object">System64\LlmsTxtGenerator\Console\Command\GenerateCommand</item>
+                <item name="llmstxt_generate" xsi:type="object">SystemSixtyFour\LlmsTxtGenerator\Console\Command\GenerateCommand</item>
             </argument>
         </arguments>
     </type>
 
     <!-- Cron Expression Backend Model -->
-    <virtualType name="System64\LlmsTxtGenerator\Model\Config\Backend\Cron" type="Magento\Cron\Model\Config\Backend\Product\Alert">
+    <virtualType name="SystemSixtyFour\LlmsTxtGenerator\Model\Config\Backend\Cron" type="Magento\Cron\Model\Config\Backend\Product\Alert">
         <arguments>
             <argument name="cronStringPath" xsi:type="string">llmstxt_generator/cron/cron_expr</argument>
             <argument name="cronModelPath" xsi:type="string">llmstxt_generator/cron/cron_model</argument>

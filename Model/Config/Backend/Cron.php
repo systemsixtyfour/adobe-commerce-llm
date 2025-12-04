@@ -6,9 +6,9 @@
  */
 declare(strict_types=1);
 
-namespace System64\LlmsTxtGenerator\Model\Config\Backend;
+namespace SystemSixtyFour\LlmsTxtGenerator\Model\Config\Backend;
 
-use System64\LlmsTxtGenerator\Model\Config\Source\Frequency;
+use SystemSixtyFour\LlmsTxtGenerator\Model\Config\Source\Frequency;
 use Magento\Framework\App\Cache\TypeListInterface;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\App\Config\Value;

@@ -4,10 +4,10 @@
  */
 declare(strict_types=1);
 
-namespace System64\LlmsTxtGenerator\Console\Command;
+namespace SystemSixtyFour\LlmsTxtGenerator\Console\Command;
 
-use System64\LlmsTxtGenerator\Model\Generator;
-use System64\LlmsTxtGenerator\Model\Config;
+use SystemSixtyFour\LlmsTxtGenerator\Model\Generator;
+use SystemSixtyFour\LlmsTxtGenerator\Model\Config;
 use Magento\Store\Model\StoreManagerInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;

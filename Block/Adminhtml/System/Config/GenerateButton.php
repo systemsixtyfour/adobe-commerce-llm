@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace System64\LlmsTxtGenerator\Block\Adminhtml\System\Config;
+namespace SystemSixtyFour\LlmsTxtGenerator\Block\Adminhtml\System\Config;
 
 use Magento\Backend\Block\Template\Context;
 use Magento\Config\Block\System\Config\Form\Field;
@@ -15,7 +15,7 @@ class GenerateButton extends Field
     /**
      * @var string
      */
-    protected $_template = 'System64_LlmsTxtGenerator::system/config/generate_button.phtml';
+    protected $_template = 'SystemSixtyFour_LlmsTxtGenerator::system/config/generate_button.phtml';
 
     /**
      * Render the element HTML

@@ -7,7 +7,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
     <group id="default">
-        <job name="llmstxt_generator_generate" instance="System64\LlmsTxtGenerator\Cron\Generate" method="execute">
+        <job name="llmstxt_generator_generate" instance="SystemSixtyFour\LlmsTxtGenerator\Cron\Generate" method="execute">
             <config_path>llmstxt_generator/cron/cron_expr</config_path>
         </job>
     </group>

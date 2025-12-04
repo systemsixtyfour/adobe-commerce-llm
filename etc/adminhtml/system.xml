@@ -7,14 +7,14 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="system64_llmstxt" translate="label" sortOrder="500">
+        <tab id="systemsixtyfour_llmstxt" translate="label" sortOrder="500">
             <label>LLMs TXT Generator</label>
         </tab>
 
         <section id="llmstxt_generator" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>LLMs TXT Generator</label>
-            <tab>system64_llmstxt</tab>
-            <resource>System64_LlmsTxtGenerator::config</resource>
+            <tab>systemsixtyfour_llmstxt</tab>
+            <resource>SystemSixtyFour_LlmsTxtGenerator::config</resource>
 
             <!-- General Settings -->
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -28,7 +28,7 @@
 
                 <field id="entity_types" translate="label comment" type="multiselect" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Select Entity Types</label>
-                    <source_model>System64\LlmsTxtGenerator\Model\Config\Source\EntityTypes</source_model>
+                    <source_model>SystemSixtyFour\LlmsTxtGenerator\Model\Config\Source\EntityTypes</source_model>
                     <comment>Select which entities to include in the llms.txt file</comment>
                 </field>
             </group>
@@ -59,7 +59,7 @@
 
                 <field id="frequency" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Generation Frequency</label>
-                    <source_model>System64\LlmsTxtGenerator\Model\Config\Source\Frequency</source_model>
+                    <source_model>SystemSixtyFour\LlmsTxtGenerator\Model\Config\Source\Frequency</source_model>
                     <comment>How often should the llms.txt file be regenerated</comment>
                 </field>
 
@@ -75,12 +75,12 @@
 
                 <field id="info" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Current Status</label>
-                    <frontend_model>System64\LlmsTxtGenerator\Block\Adminhtml\System\Config\Status</frontend_model>
+                    <frontend_model>SystemSixtyFour\LlmsTxtGenerator\Block\Adminhtml\System\Config\Status</frontend_model>
                 </field>
 
                 <field id="generate_button" translate="label" type="button" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Generate Now</label>
-                    <frontend_model>System64\LlmsTxtGenerator\Block\Adminhtml\System\Config\GenerateButton</frontend_model>
+                    <frontend_model>SystemSixtyFour\LlmsTxtGenerator\Block\Adminhtml\System\Config\GenerateButton</frontend_model>
                 </field>
             </group>
 

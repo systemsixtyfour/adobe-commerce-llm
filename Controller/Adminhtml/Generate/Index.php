@@ -4,9 +4,9 @@
  */
 declare(strict_types=1);
 
-namespace System64\LlmsTxtGenerator\Controller\Adminhtml\Generate;
+namespace SystemSixtyFour\LlmsTxtGenerator\Controller\Adminhtml\Generate;
 
-use System64\LlmsTxtGenerator\Model\Generator;
+use SystemSixtyFour\LlmsTxtGenerator\Model\Generator;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\Controller\Result\JsonFactory;
@@ -16,7 +16,7 @@ class Index extends Action
     /**
      * Authorization level
      */
-    public const ADMIN_RESOURCE = 'System64_LlmsTxtGenerator::config';
+    public const ADMIN_RESOURCE = 'SystemSixtyFour_LlmsTxtGenerator::config';
 
     private Generator $generator;
     private JsonFactory $jsonFactory;

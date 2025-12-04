@@ -8,7 +8,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="admin">
         <route id="llmstxt" frontName="llmstxt">
-            <module name="System64_LlmsTxtGenerator" before="Magento_Backend"/>
+            <module name="SystemSixtyFour_LlmsTxtGenerator" before="Magento_Backend"/>
         </route>
     </router>
 </config>

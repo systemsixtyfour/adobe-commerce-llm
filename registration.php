@@ -1,6 +1,6 @@
 <?php
 /**
- * System64 LLMs TXT Generator Module
+ * SystemSixtyFour LLMs TXT Generator Module
  *
  * Generates llms.txt file for AI crawlers (ChatGPT, Claude, Gemini, Perplexity)
  */
@@ -11,6 +11,6 @@ use Magento\Framework\Component\ComponentRegistrar;
 
 ComponentRegistrar::register(
     ComponentRegistrar::MODULE,
-    'System64_LlmsTxtGenerator',
+    'SystemSixtyFour_LlmsTxtGenerator',
     __DIR__
 );

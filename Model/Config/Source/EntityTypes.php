@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace System64\LlmsTxtGenerator\Model\Config\Source;
+namespace SystemSixtyFour\LlmsTxtGenerator\Model\Config\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
 

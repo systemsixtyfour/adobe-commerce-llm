@@ -4,10 +4,10 @@
  */
 declare(strict_types=1);
 
-namespace System64\LlmsTxtGenerator\Cron;
+namespace SystemSixtyFour\LlmsTxtGenerator\Cron;
 
-use System64\LlmsTxtGenerator\Model\Generator;
-use System64\LlmsTxtGenerator\Model\Config;
+use SystemSixtyFour\LlmsTxtGenerator\Model\Generator;
+use SystemSixtyFour\LlmsTxtGenerator\Model\Config;
 use Psr\Log\LoggerInterface;
 
 class Generate

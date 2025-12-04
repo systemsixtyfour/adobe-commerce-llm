@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace System64\LlmsTxtGenerator\Model;
+namespace SystemSixtyFour\LlmsTxtGenerator\Model;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Store\Model\ScopeInterface;
